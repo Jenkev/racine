@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+    <head>
+            <Title>Test positionnement et affichage</Title>
+            <link rel="stylesheet" href="../css/cour2.css">
+    </head>
+
+    <body class="overflwscroll">
+            <header class="tete fondbleuleger fix" ¨></header>
+            <h1 class="lvl1">Test display list item.</h1>
+
+                 <p class="dlistitem">Un paragraphe auquel je vais donner le display list item depuis le css en faisant en sorte que la puce soit a l'intérieur du paragraphe</p>
+                 <p class="dlistitem">Un paragraphe auquel je vais donner le display list item depuis le css en faisant en sorte que la puce soit a l'intérieur du paragraphe</p>
+
+            <h1 class="lvl1">Test display inline-block.</h1>
+
+                <p>Voici un paragraphe avec un span, type block par défaut pour le pragraphe prend tout l'epace disponible par rapport au parent et<span> une span type inline par défault qui ne prend que l'espace nécessaire à l'affichage du contenu et va ignorée la largeur attribuée à la span dans le  css.</span></p>
+                <p>Voici un paragraphe avec un span, type block par défaut pour le pragraphe prend tout l'epace disponible par rapport au parent et<span class="blck"> une span à qui on donne un display block elle va donc passer la largeur demandée</span> mais fait un saut à la ligne avant et aprés la span comme pour un élément block par défault.</p>
+                <p>Voici un paragraphe avec un span, type block par défaut pour le pragraphe prend tout l'epace disponible par rapport au parent et<span class="ib"> une span de type type inline-block qui va prendre en compte la largeur attribuée a la span</span> mais ne va pas passer à la ligne avant ou aprés comme c'est le cas pour un elemen de type block par défaut.</p>
+    
+            <h1  class="lvl1">Test les positions en css.</h1>
+                <h2 class="lvl2">La position relative.</h2>
+
+                    <div class="cavert relativehaute"><p>position relative haute de 50px</p></div>
+                    <div class="cableu relativedroit"><P>position relative gauche de 50px</P></div>
+                    <div class="carouge relativebas"><p>position relative base de 50px</p></div>
+                    <div class="cajaune"><p>position static pour voir la différence avec les autres</p></div>
+                
+                <h2 class="lvl2">La position absolue.</h2>
+                        
+                        <p>En position absolue, l'élément ne va ce placer que par rapport a un parent placé autrement qu'en static. Si il n'a pas de parent placé, il va ce placer par rapport à la page en elle même.</p>
+                        <p class="absoluetop">un paragraphe sans éléments parent placé que l'on place 100px top et qui va donc ce placer a 100 px top par rapport à la page</p>
+                        
+                        <div class="divrelative grandediv bc-jaune">
+                            
+                            <div class="cableu bordergauche bbox"><p></p></div>
+                            <div class=" absodansdiv cavert overflwscroll"><p>Absolue placée par rapport à la grand div jaune car elle est en relative, la deuxieme prend ça place car elle est sortie du flux et les autres éléments ne la prennent plus en compte pour le placement</P></div>
+                            <div class="cableu bordergauche bbox overflwscroll"><p>cette dis elle la 3ème elle prend la place des la seconde dans la div parent parceque la seconde est placée en position absolue et du coup retirer du flux et donc elle n'est plus prise en compte par les autres élément pour le positionnement.<p></div>
+                           
+                        </div>
+                        
+                    </p>
+                <h2 class="lvl2">La propiété Float.<h2>
+
+                    <div class="flottante bcrouge border"></div>
+                    <div class="bcvert divh "></div>
+                    <div class="grandediv bc-jaune">
+                        
+                        <p>
+                           Ici le text de notre paragraphe va venir à côté de la div en float par contre les autre div ne le prenne pas en compte et dés que notre paragraphe n'aura plus
+                            la div float à ça gauche il va reprendre tout la place disponible dans son parent c'est à dire ici la div jaune.<br>
+                            lacer nos différents éléments à l’intérieur de nos balises et puis appliquer 
+                            les styles CSS directement au div.Nous allons utiliser l’élément div comme conteneur pour différents éléments afin de 
+                            pouvoir ensuite facilement appliquer les mêmes styles CSS à tous les éléments contenus 
+                            dans notre div par héritage ou pour les mettre en forme en appliquant un style spécifique 
+                            au div.Ici, le terme de « conteneur » est l’équivalent du terme « parent » : nous allons simplement 
+                            placer nos différents éléments à l’intérieur de nos balises et puis appliquer 
+                            les styles CSS directement au div.Nous allons utiliser l’élément div comme conteneur pour différents éléments afin de 
+                            pouvoir ensuite facilement appliquer les mêmes styles CSS à tous les éléments contenus 
+                            dans notre div par héritage ou pour les mettre en forme en appliquant un style spécifique 
+                            au div.Ici, le terme de « conteneur » est l’équivalent du terme « parent » : nous allons simplement 
+                            placer nos différents éléments à l’intérieur de nos balises et puis appliquer 
+                            les styles CSS directement au div.Nous allons utiliser l’élément div comme conteneur pour différents éléments afin de 
+                            pouvoir ensuite facilement appliquer les mêmes styles CSS à tous les éléments contenus 
+                            dans notre div par héritage ou pour les mettre en forme en appliquant un style spécifique 
+                            au div.Ici, le terme de « conteneur » est l’équivalent du terme « parent » : nous allons simplement 
+                            placer nos différents éléments à l’intérieur de nos balises et puis appliquer 
+                            les styles CSS directement au div.Nous allons utiliser l’élément div comme conteneur pour différents éléments afin de 
+                            pouvoir ensuite facilement appliquer les mêmes styles CSS à tous les éléments contenus 
+                        </p>
+
+                    </div>
+                
+                <h2 class="lvl2">Le clear float, d'abord un cas sans clear float</h2>
+                
+                <p>Ici, nous faisons flotter chacun des div internes à gauche dans nos div conteneurs. Pour 
+                    nos deux premiers div, le résultat est celui espéré. En revanche, on observe un décalage 
+                    qui se crée pour nos trois derniers div.
+                    En fait, c’est tout à fait normal : le fait que l’affichage se fasse bien avec nos deux 
+                    premiers div est simplement un « coup de chance » dû au fait que nous n’avons pas deux 
+                    éléments flottants qui se touchent puisque les div conteneurs soient plus grands que 
+                    les div flottés et qu’ils ne contiennent qu’un élément flottant.</p>
+                        
+                <div class="conteneur">
+                    <div class="interne gauche w50 h50"></div>
+                    <p class="pc">Un premier paragraphe</p>
+                    <p>Un deuxième paragraphe</p>
+                  </div>
+                  <div class="conteneur">
+                    <div class="interne gauche w50 h50"></div>
+                    <p class="pc">Un premier paragraphe</p>
+                    <p>Un deuxième paragraphe</p>
+                  </div>
+                  <div class="conteneur">
+                    <div class="interne gauche w100 h100"></div>
+                    <p class="pc">Un premier paragraphe</p>
+                    <p>Un deuxième paragraphe</p>
+                  </div>
+                  <div class="conteneur">
+                    <div class="interne gauche w100 h150"></div>
+                    <p class="pc">Un premier paragraphe</p>
+                    <p>Un deuxième paragraphe</p>
+                </div>
+                    <div class="conteneur">
+                    <p class="pc">Un premier paragraphe</p>
+                    <p>Un deuxième paragraphe</p>
+                </div>
+
+               <h2 class="lvl2">Avec clear float</h2> 
+                <p>La propriété clear empêche ici nos div conteneurs (et donc les éléments qu’ils contiennent) de venir se positionner à côté des éléments flottants
+                     précédents. Les div conteneurs vont donc se positionner juste en dessous des flottants si les éléments flottants précédents dépassaient de leur conteneur.</p>
+                
+
+                  <div class="conteneur">
+                    <div class="interne gauche w50 h50"></div>
+                    <p>Un premier paragraphe</p>
+                    <p>Un deuxième paragraphe</p>
+                  </div>
+                  <div class="conteneur cleared">
+                    <div class="interne gauche w50 h50"></div>
+                    <p>Un premier paragraphe</p>
+                    <p>Un deuxième paragraphe</p>
+                  </div>
+                  <div class="conteneur cleared">
+                    <div class="interne gauche w100 h100"></div>
+                    <p>Un premier paragraphe</p>
+                    <p>Un deuxième paragraphe</p>
+                  </div>
+                  <div class="conteneur cleared">
+                    <div class="interne gauche w100 h150"></div>
+                    <p>Un premier paragraphe</p>
+                    <p>Un deuxième paragraphe</p>
+                  </div>
+                  <div class="conteneur cleared">
+                    <p>Un premier paragraphe</p>
+                    <p>Un deuxième paragraphe</p>
+                  </div>
+
+                <h2 class="lvl2">Gérer la taille d'un parent par rapport à un élément en float avec le hack clear fix</h2>
+
+
+                  <div class=" bc-jaune border clearfix">
+                    <div class="h w bcrouge gauche "></div>
+                    <p class="bcvert">Un premier paragraphe</p>
+                    <p class="bcvert">Un second paragraphe</p>
+                    <div class="h w bcrouge droite "></div>
+                  </div>
+              
+                  
+                  
+                
+                
+
+                
+                
+                        
+
+
+                
+    </body>
+</html>

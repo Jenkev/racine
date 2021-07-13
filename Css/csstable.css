@@ -1,0 +1,41 @@
+.tableborder{
+    border: 2px solid black;
+}
+.pading{
+    padding: 10px;
+}
+.souligne{
+    text-decoration: underline;
+}
+.bordercollapse{
+    border-collapse: collapse;
+}
+.bcrouge{
+    background-color: red;
+}
+.bcjaune{
+    background-color: yellow;
+}
+.Tfixedlayout{
+    table-layout: fixed;
+}
+.Twidth{
+    width: 1250px;
+    height: 450px;
+}
+.Tpading{
+    padding: 10px;
+}
+.Tmarginbot{
+    margin-bottom: 20px;
+}
+.poscaption{
+    caption-side: bottom;
+}
+.align{
+    vertical-align: middle;
+    
+}
+.textcenter{
+    text-align: center;
+}

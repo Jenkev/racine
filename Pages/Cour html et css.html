@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!--Titre de la page-->
+        <title>Cour html et css</title>
+        <!--Elément meta ici on lui donne l'attribu charset (character set) a qui on donne la valeur utf-8 qui va faire en sorte de bien afficher nos charactere dans le navigateur -->
+        <meta charset="utf-8">
+    <!---Balise orpheline link avec atribut link valeur stylesheet pour dire qu'on lie un feuille de style et attribut href avec en valeur le chemin d'ou ce trouve la feuille de tyle-->>
+        <link rel="stylesheet" href="../css/cour.css">
+    </head>
+    <body>
+        <!--Les niveaux de titre-->
+        <h1>Titre de niveau 1</h1>
+        <h2>Titre de niveau 2</h2>
+        <nav>
+            <li>lien vers <a href="..\Fichier\Cours-Complet-HTML-et-CSS-2020-fdvhe8.pdf"target="_blank">le cour</a> </li>
+            <li>lien vers <a href="Page 2.html"target="_blank">page 2</a></li>
+            <li>lien vers <a href="Page 3.html"target="_blank">page 3</a></li>
+            <li>liens vers <a href="Page 4.html"target="_blank">page 4</a></li>
+            <!--utiliser l'atribut target en lui donnant la valeur _blank pour ouvrir le lien dans un nouvel onglet-->
+            <li>lien vers <a href="Page 5.html" target="_blank">page 5</a></li>
+            <li>lien vers <a href="tableaux.html"target="_blank">les tableaux</a></li>
+            <li>lien vers <a href="Insertion multimédia.html"target="_blank">les insertionts multimédias</li>
+            <li><a href="#Lien"> lien </a></li>
+            <li><a href="#Mail">E-mail</a></li>
+            </nav>
+        <h6>tire de niveau 6: 6 niveaux de titre possible</h6>
+        <!--Ajout d'un paragraphe-->
+        <!--L'élément hr pour passer a la ligne avec une sépatation (ligne) et br sans séparation-->
+        <p1>paragrapheparagraphepa<hr>ragrapheparagrapheparagrap<br>heparagrapheparagrapheparagrapheparagrapheparagrapheparagrapheparagrapheparagrapheparagrapheparagrapheparagrapheparagrapheparagrapheparagraphe</p1>
+        <p><pre>Second paragraphe en utilisant l'élément "pre" afin que le texte apparaisse comme il est dans l'diteur de code sans aucune mise en forme</pre></p>
+        <!--liste non ordonée 'Unordoned list' déclaréé avec l'élément ul-->
+
+        <h2>Liste non ordonée:</h2>
+            <ul>
+                <!--L'élément li va insérer un puce au seins de la liste-->
+                <li>L’entité HTML &nbsp; (« non breaking space ») va nous permettre d’ajouter une
+                espace simple dit espace « insécable » </li>
+                <li>L’entité HTML &ensp; (« en space ») va nous permettre de créer une espace
+                double</li>
+                <li>L’entité HTML &emsp; (« em space ») va nous permettre de créer une espace
+                quadruple</li>
+                <li>L’entité HTML &thinsp; (« thin space ») va nous permettre de créer un espace très
+                fin (demi-espace)</li>
+            </ul>
+        <h2 class="under">Liste ordonée:</h2>
+        <!--L'élément ol pour déclarer une liste ordonée-->
+        <!--on lui passe les attribut start a 4 pour commencer a la lettre b et le type a A pour que ce soit une liste alphabétique-->
+        <!--L'estribus revered fait changer l'odre des puces (décroissant )-->
+        <ol start="4" type="a" reversed >
+            <!-- utilisation d'un id afin de mettre  le contenu du li en forme via css -->
+            <li id="bc-vert">Un</li>
+            <li>Deux</li>
+            <li>Trois</li>
+            <li>Quatre</li>
+            <!--on atribue la valeur 8 a cette element liste ce qui va lui donne la 8 lettre de l'alphabet-->
+            <li value="8">Cinque</li>
+
+        </ol> 
+        <!--Definiton list-->
+        <dl>
+          <dt> Html</dt> 
+                <!--Definition therm-->
+                <dd>Le HyperText Markup Language, généralement abrégé HTML ou dans sa dernière version HTML5, est le langage de balisage conçu pour représenter les pages web.</dd>
+        </dl>
+            
+        <!--importance moins grande aux textes dans les éléments em qu’à ceux dans strong mais une importance plus grande à ces textes qu’à des simples paragraphes.-->
+        <p>L’élément HTML <strong>strong</strong> va être utilisé pour signifier qu’un contenu est très important et 
+            doit être considéré comme tel par les moteurs de recherche (et les navigateurs).</p>
+        <!--L'élément mark va surligner le texte-->µ
+        <!--utilisation de l'attribu class afin de mettre le paragraphe en forme via le css précisément( sans toucher les autres paragraphes) et on précise une deuxième classe qui va mettre le texte en gras afin d'utiliser deux classes pour un éléments-->
+        <p class="bc-jaune gras souligne"><mark>L’élément HTML</mark> em (<em>pour emphasis ; « emphase » ou « accentuation » en français</em>) va 
+            être utilisé pour mettre des termes en emphase.
+            Pour lier ces différents fichiers et ressources entre eux (et donc offrir entre autres à nos 
+            utilisateurs la possibilité de naviguer de l’un à l’autre), nous allons utiliser des valeurs 
+            relatives, c’est-à-dire que nous allons préciser l’emplacement de la ressource que l’on 
+            souhaite utiliser (ou vers laquelle on souhaite renvoyer) relativement à l’emplacement de 
+            la page / ressource qui souhaite l’utiliser (la page de départ).
+            C’est comme cela que nous allons procéder dans le cas précis de la création de liens 
+            internes : nous allons préciser en valeur de l’attribut href l’emplacement de la page cible 
+            (page de destination) par rapport à l’emplacement sur le serveur de la page source.
+            Trois cas vont alors se présenter à nous :
+            1. Le cas où les deux pages (source et destination) se trouvent dans un même dossier 
+            ;76
+            2. Le cas où la page de destination se trouve dans un sous dossier par rapport à la 
+            page source ;
+            3. Le cas où la page de destination se trouve dans un dossier parent par rapport à la 
+            page source.
+            Pour chacun de ces cas, nous allons construire la valeur de notre attribut href de manière 
+            différente :
+            • Si les deux pages se situent dans le même dossier, alors on pourra se contenter 
+            de préciser le nom de la page cible/de destination (avec son extension) en valeur 
+            de l’attribut href ;
+            • Si la page cible se situe dans un sous dossier par rapport à la page à partir de 
+            laquelle on fait un lien, alors on précisera le nom du sous dossier suivi d’un slash 
+            suivi du nom de la page cible en valeur de l’attribut href ;
+            • Si la page cible se situe dans un dossier parent par rapport à la page de départ, 
+            alors il faudra indiquer deux points suivis d’un slash suivi du nom de la page de 
+            destination en valeur de l’attribut href.
+            Exemples pratiques de création de liens internes
+            Pour illustrer cela, je vous propose de créer un premier dossier sur le bureau de votre 
+            ordinateur. Nous imaginerons que ce dossier correspond à la racine d’un site Internet et 
+            nous pouvons par exemple l’appeler racine.
+            Dans ce dossier, vous allez créer une première page HTML que vous pourrez 
+            appeler home.html et un second dossier qu’on peut appeler cours par exemple.
+            Dans ce sous dossier cours, je vous propose de créer deux 
+            pages presentation.html et livres.html par exemple ainsi qu’un troisième dossier qu’on 
+            pourra appeler code.
+            Dans ce dernier dossier code, nous créerons finalement une dernière page qu’on appellera 
+            liens.html.
+            L’idée ici va être de faire des liens entre ces différentes pages. Encore une fois, vous 
+            pouvez imaginer que tout ce qui se trouve au sein de votre dossier racine est l’équivalent 
+            de la structure d’un site web.
+            A partir de notre page home.html, on veut créer trois liens :
+            • Un vers la page presentation.html située dans le sous dossier cours ;
+            • Un vers la page livres.html située dans le sous dossier cours ;
+            • Un vers la page liens.html située dans le sous-sous dossier code ;
+            Voici comment on va s’y prendre 
+            Pour lier ces différents fichiers et ressources entre eux (et donc offrir entre autres à nos 
+            utilisateurs la possibilité de naviguer de l’un à l’autre), nous allons utiliser des valeurs 
+            relatives, c’est-à-dire que nous allons préciser l’emplacement de la ressource que l’on 
+            souhaite utiliser (ou vers laquelle on souhaite renvoyer) relativement à l’emplacement de 
+            la page / ressource qui souhaite l’utiliser (la page de départ).
+            C’est comme cela que nous allons procéder dans le cas précis de la création de liens 
+            internes : nous allons préciser en valeur de l’attribut href l’emplacement de la page cible 
+            (page de destination) par rapport à l’emplacement sur le serveur de la page source.
+            Trois cas vont alors se présenter à nous :
+            1. Le cas où les deux pages (source et destination) se trouvent dans un même dossier 
+            ;76 L’idée ici va être de faire des liens entre ces différentes pages. Encore une fois, vous 
+            pouvez imaginer que tout ce qui se trouve au sein de votre dossier racine est l’équivalent 
+            de la structure d’un site web.
+            A partir de notre page home.html, on veut créer trois liens :
+            • Un vers la page presentation.html située dans le sous dossier cours ;
+            • Un vers la page livres.html située dans le sous dossier cours ;
+            • Un vers la page liens.html située dans le sous-sous dossier code ;
+            Voici comment on va s’y prendre 
+            Pour lier ces différents fichiers et ressources entre eux (et donc offrir entre autres à nos 
+            utilisateurs la possibilité de naviguer de l’un à l’autre), nous allons utiliser des valeurs 
+            relatives, c’est-à-dire que nous allons préciser l’emplacement de la ressource que l’on 
+            souhaite utiliser (ou vers laquelle on souhaite renvoyer) relativement à l’emplacement de 
+            la page / ressource qui souhaite l’utiliser (la page de départ).
+            C’est comme cela que nous allons procéder dans le cas précis de la création de liens 
+            internes : nous allons préciser en valeur de l’attribut href l’emplacement de la page cible 
+            (page de destination) par rapport à l’emplacement sur le serveur de la page source.
+            Trois cas vont alors se présenter à nous :
+            1. Le cas où les deux pages (source et destination) se trouvent dans un même dossier 
+            ;76
+           
+        </p>
+
+    <h2 id="Lien">Les liens:</h2>
+            <!-- element "a" suvis de l'attribut href auquel au donne comme valeur le lien de la page a ouvrir pour créer des liens-->
+            <ul> 
+                <li>lien vers <a href="Cours-Complet-HTML-et-CSS-2020-fdvhe8.pdf">le cour</a> </li>
+                <li>lien vers <a href="ex/Page%202.html">page 2</a></li>
+                <li>lien vers <a href="ex/code/Page%203.html">page 3</a></li> 
+                <!--utiliser l'atribut target en lui donnant la valeur _blank pour ouvrir le lien dans un nouvel onglet-->
+                <li>lien vers <a href="Page%204.html" target="_blank">page 4</a></li>
+
+
+
+
+            </ul>
+    <h2 id="Mail">l'envoi de mail</h2>
+    <!-- on utilise l'élément 'a' suivis de l'attribut href auquel au donne comme valeur mailto suis de l'adresse mail a qui envoyer un email-->
+    <p>Si vous souhaitez me contacter vous pouvez me contacter par <a href = mailto:kevin.jenart@gmail.com> email</a></p>
+    <h2>Le téléchargement de fichier</h2>
+    <!-- Téléchargement du fichier en donnant à l'attribu href comme valeur le chemin du fi-->
+    <p>Voici un lien afin de télécharger le cour complet <a href="elvui-11.52.zip" download="Test_téléchargement.zip">html + css</a> </p>
+
+           
+    </body>
+
+
+
+
+
+
+</html>

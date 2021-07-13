@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Insertion multimédia</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="../css/cssmulti.css">
+    </head>
+    
+    <body>
+        <header class="header bcimage"></header>
+
+        <h1>Insertion, redimention, figure et figcaption</h1>
+            <figure class="border2 figsize">
+                <img src="../images/wip.jfif" alt="Banière du site représentant desfigurine d'ouvrier travaillant sur un circuit imprimé." class="imageredim"></header>
+                <figcaption class="figcapbccolor">figure pour indiquer qu’une image, une piste audio ou vidéo n’est pas strictementdécorative et figcaption à l’intérieur de figure pour accoler une légende au contenu de notre élément figure.</figcaption>
+            </figure>
+
+        <h1>Insérer du contenu audio</h1>
+        
+            <!--Ici une balise audioavec l'atribu src à qui on attribue le chemin de notre fichier mp3 et l'atribu controls afin d'afficher les controles sur notre page (play, pause, barre de lecture etc..)-->
+            <audio src="..\Fichiers audio\Abundance.mp3" controls>
+                Votre navigateur semble ne pas suporter ce type de fichiers (mp3)
+            </audio>
+
+            <!--Une autre methode pour insérer une piste audio et on ajoute l'atribu loop pour lire le son en boucle-->
+            <audio controls loop>
+                <source src="..\Fichiers audio\ThunderClap4HvyC SDT2042602.mp3">
+            </audio>
+        <h1>Insertion de vidéo</h1>
+            <!-- insertion d'une vidéo avec la balise video-->
+            <video controls poster="..\Images\wip.jfif" >
+                <source src="..\Fichiers vidéo\25 CRAZIEST OLYMPIC FAILS.mp4">
+                <track kind="subtitles" src="Fichier\sous-titres.vtt">
+            <!--Petit texte au cas ou la vidéo ne peut pas être lue par le navigateur de l'utilisateur-->
+                Les plus beau fail des jeux olympique dans une compilation hilarante
+
+            </video>
+
+
+    </body>
+
+</html>

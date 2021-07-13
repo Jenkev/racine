@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="../css/csstable.css">
+        <title>Les tableaux</title>
+    </head>
+    <body>
+        <h1 class="souligne">Html: les tableaux</h1>
+        <table class="bordercollapse Tmarginbot">
+            <caption>Légende du tableau avec caption qui doit être inséré immédiatement 
+                après la balise ouvrante de l’élément table</caption>
+            <colgroup>
+                <col span="2" class="bcrouge">
+                <col>
+                <col>
+                <col class="bcjaune">
+            </colgroup>
+
+            <thead>
+
+                <tr>
+                    <th class="tableborder">Nom</th>
+                    <th class="tableborder">Prénom</th>
+                    <th class="tableborder">2ème prénom</th>
+                    <th class="tableborder">Âge</th>
+                    <th class="tableborder">E-mail</th>
+                    <th class="tableborder">Inscription</th>
+                </tr>
+            </thead>
+            
+            
+                <tr>
+                    <td class="tableborder">Jenart</td>
+                    <td class="tableborder">Kevin</td>
+                    <td class="tableborder">Jean</td>
+                    <td class="tableborder">31</td>
+                    <td class="tableborder">kevin.jenart@gmail.com</td>
+                    <td class="tableborder" rowspan="2">validée</td>
+                </tr>
+              
+
+                <tr>
+                    <td class="tableborder">Troche</td>
+                    <td class="tableborder" colspan="2">Sonya</td>
+                    <td class="tableborder">27</td>
+                    <td class="tableborder">Troche.sonya@live.fr</td>
+                   
+                </tr>
+              
+        </table>
+
+        <table class="bordercollapse Tfixedlayout Twidth poscaption alignvertical textcenter">
+            <caption>2ème tableau avec layout: fixed pour dimensioner le tableau</caption>
+            
+
+            <thead>
+
+                <tr>
+                    <th class="tableborder">Nom</th>
+                    <th class="tableborder">Prénom</th>
+                    <th class="tableborder">2ème prénom</th>
+                    <th class="tableborder">Âge</th>
+                    <th class="tableborder">E-mail</th>
+                    <th class="tableborder">Inscription</th>
+                </tr>
+            </thead>
+            
+            
+                <tr>
+                    <td class="tableborder">Jenart</td>
+                    <td class="tableborder">Kevin</td>
+                    <td class="tableborder">Jean</td>
+                    <td class="tableborder">31</td>
+                    <td class="tableborder">kevin.jenart@gmail.com</td>
+                    <td class="tableborder" rowspan="2">validée</td>
+                </tr>
+              
+
+                <tr>
+                    <td class="tableborder">Troche</td>
+                    <td class="tableborder" colspan="2">Sonya</td>
+                    <td class="tableborder">27</td>
+                    <td class="tableborder">Troche.sonya@live.fr</td>
+                   
+                </tr>
+              
+        </table>
+        
+    </body>
+</html>

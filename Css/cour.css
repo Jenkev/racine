@@ -1,0 +1,53 @@
+body{
+    background-color: coral;
+    font-family: 'Viaoda Libre';
+
+}
+/* donne une couleur et une taille spécifque au paragraphe de notre page*/
+p{
+    color: rgbaé(0, 0, 0, 1);
+    size: 20px;
+}
+/* ici on ne va applique le style qu'au paragraphe p1*/
+p1{
+    color: fuchsia;
+    background-color: floralwhite;
+}  
+
+/* ici on va donner une marge de 15px a toute la page en utilisant le selecteur css "etoiles" */
+*{
+    margin: 15px;
+}
+/*ici on donne un style aux liens (a) contenu dans une liste non ordonée (ul)*/
+ul a{
+    background-color: palegreen;
+}
+/*utilisation d'un classe en css commence par . suivi du nom de la classe*/
+.bc-jaune{
+    background-color: yellow;
+}
+/*utilisation d'un id en css commence par # suivi du nom de l'id*/
+#bc-vert{
+    background-color: green;
+}
+/*création d'un deuxième class afin d'utiliser deux classe sur un élément : voir html*/
+.gras{
+    font-weight: bold;
+}
+.under{
+    text-decoration: green wavy underline;
+}
+.souligne{
+    text-decoration: underline;
+    text-decoration-color: red ;
+    text-decoration-style: wavy;
+}
+.bordertest{
+border: 2px outset black
+}
+.divsize{
+width: 400px;
+height: 200px;
+background-color: rgb(255, 255, 255);
+overflow: scroll;
+}
